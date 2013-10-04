@@ -30,6 +30,8 @@ field along with everything else specified in your search template. This example
 shows how to override a hypothetical ``FileIndex``'s ``prepare`` method to 
 include the extract content along with information retrieved from the database::
 
+    from django.template import loader, Context
+    
     def prepare(self, obj):
         data = super(FileIndex, self).prepare(obj)
 
